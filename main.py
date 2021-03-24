@@ -24,6 +24,7 @@ pen.write("My cute turtle", align="center", font=("Courier", 24, "normal"))
 
 DELTA = 5
 
+
 # Functions
 def my_cute_turtle_up():
     y = my_cute_turtle.ycor()
@@ -31,6 +32,8 @@ def my_cute_turtle_up():
     if y < 300:
         my_cute_turtle.sety(y)
     else:
+        pen.clear()
+        pen.write("Passed 300 pixels up", align="center", font=("Courier", 24, "normal"))
         my_cute_turtle.sety(-300)
     my_cute_turtle.setheading(90)
     turtle.ontimer(my_cute_turtle_up(), 10)
@@ -42,6 +45,8 @@ def my_cute_turtle_down():
     if y > -300:
         my_cute_turtle.sety(y)
     else:
+        pen.clear()
+        pen.write("Passed 300 pixels down", align="center", font=("Courier", 24, "normal"))
         my_cute_turtle.sety(300)
     my_cute_turtle.setheading(270)
     turtle.ontimer(my_cute_turtle_down(), 10)
@@ -55,6 +60,8 @@ def my_cute_turtle_left():
     if x > -400:
         my_cute_turtle.setx(x)
     else:
+        pen.clear()
+        pen.write("Passed 400 pixels on left", align="center", font=("Courier", 24, "normal"))
         my_cute_turtle.setx(400)
         my_cute_turtle.color("green")
     my_cute_turtle.setheading(180)
@@ -69,6 +76,8 @@ def my_cute_turtle_right():
     if x < 400:
         my_cute_turtle.setx(x)
     else:
+        pen.clear()
+        pen.write("Passed 400 pixels on right", align="center", font=("Courier", 24, "normal"))
         my_cute_turtle.setx(-400)
         my_cute_turtle.color("brown")
     my_cute_turtle.setheading(0)
